@@ -1,4 +1,36 @@
 <html lang="en">
+<section class="section">
+<h2>High‑Level Timeline (earliest → latest)</h2>
+<div class="timeline">
+<div class="tl-item"><div class="dot"></div><div class="tl-card"><strong>Al‑Khwarizmi</strong> → early algebra & algorithms that inspire computation.</div></div>
+<div class="tl-item"><div class="dot"></div><div class="tl-card"><strong>George Boole</strong> → Boolean logic; basis of digital circuits & search.</div></div>
+<div class="tl-item"><div class="dot"></div><div class="tl-card"><strong>Alan Turing</strong> → Computability, Turing test; foundations of AI thought.</div></div>
+<div class="tl-item"><div class="dot"></div><div class="tl-card"><strong>Arthur Samuel</strong> → Early ML via games and self‑play.</div></div>
+<div class="tl-item"><div class="dot"></div><div class="tl-card"><strong>Newell & Simon</strong> → Symbolic AI & problem solving.</div></div>
+<div class="tl-item"><div class="dot"></div><div class="tl-card"><strong>John McCarthy</strong> → Coined “AI”, created Lisp, timesharing ideas.</div></div>
+<div class="tl-item"><div class="dot"></div><div class="tl-card"><strong>Marvin Minsky</strong> → Symbolic AI & robotics.</div></div>
+<div class="tl-item"><div class="dot"></div><div class="tl-card"><strong>Joseph Weizenbaum</strong> → ELIZA & AI ethics debate.</div></div>
+<div class="tl-item"><div class="dot"></div><div class="tl-card"><strong>Geoffrey Hinton</strong> → Deep learning & backprop revival.</div></div>
+<div class="tl-item"><div class="dot"></div><div class="tl-card"><strong>Fei‑Fei Li</strong> → ImageNet & modern computer vision.</div></div>
+<div class="tl-item"><div class="dot"></div><div class="tl-card"><strong>Ashish Vaswani</strong> → Transformers & attention for LLMs.</div></div>
+</div>
+</section>
+
+
+<footer>
+<p class="small">Built by <em>Leon</em> in AI class. Theme, search, & timeline by hand; individual pages generated with AI and lightly edited.</p>
+</footer>
+</main>
+
+
+<script>
+// Theme toggle with persistence
+const root = document.documentElement;
+const MODE_KEY = 'aip-mode';
+function applyMode(m){ if(m==='light'){ root.classList.add('light'); } else { root.classList.remove('light'); } }
+applyMode(localStorage.getItem(MODE_KEY)||'');
+document.getElementById('modeBtn').addEventListener('click',()=>{
+const isLight = root.classList.toggle('light');
 localStorage.setItem(MODE_KEY, isLight ? 'light' : 'dark');
 });
 
