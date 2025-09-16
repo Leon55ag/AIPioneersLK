@@ -1,10 +1,70 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My Awesome Website</title>
-</head>
-<body>
-<h1>Hello, World!</h1>
-<p>Welcome to my first GitHub Pages website.</p>
-</body>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Pioneers • Interactive Project</title>
+<meta name="description" content="A student-built interactive collection of AI pioneers with searchable cards, a timeline, and individual pages generated with AI.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🤖</text></svg>">
+<style>
+:root{
+--bg:#0f1220; /* dark bg */
+--card:#151936;
+--text:#e7e9f5;
+--muted:#b4bbf3;
+--accent:#7c8cff; /* indigo */
+--accent-2:#9ad4ff; /* sky */
+--ring: 0 0 0 3px color-mix(in oklab, var(--accent) 35%, transparent);
+--radius:18px;
+--shadow: 0 10px 30px rgba(0,0,0,.25), 0 2px 8px rgba(0,0,0,.2);
+}
+/* Light mode tokens */
+.light{
+--bg:#f7f8ff;
+--card:#ffffff;
+--text:#0e1020;
+--muted:#445;
+--accent:#4457ff;
+--accent-2:#0077ff;
+--shadow: 0 10px 30px rgba(0,0,0,.08), 0 2px 8px rgba(0,0,0,.06);
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;}
+body{
+font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+background: radial-gradient(1200px 600px at 10% -10%, color-mix(in oklab, var(--accent) 14%, transparent), transparent),
+radial-gradient(800px 400px at 100% 0%, color-mix(in oklab, var(--accent-2) 18%, transparent), transparent),
+var(--bg);
+color:var(--text);
+line-height:1.6;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header{
+position:sticky;top:0;z-index:50;
+backdrop-filter: blur(8px);
+background: color-mix(in oklab, var(--bg) 60%, transparent);
+border-bottom:1px solid color-mix(in oklab, var(--card) 80%, transparent);
+}
+.wrap{max-width:1100px;margin-inline:auto;padding:18px}
+.bar{display:flex;gap:14px;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}
+.brand em{font-style:normal;background: linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.controls{display:flex;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;background:var(--card);border:1px solid color-mix(in oklab, var(--text) 10%, transparent); box-shadow:var(--shadow); transition:.18s transform ease, .18s box-shadow ease}
+.btn:hover{transform:translateY(-1px)}
+.btn:focus{outline:none;box-shadow:var(--ring)}
+.icon{width:18px;height:18px;display:inline-block}
+
+
+.hero{padding:28px 18px 10px}
+.hero-card{background:linear-gradient(180deg, color-mix(in oklab, var(--card) 92%, transparent), var(--card)); border:1px solid color-mix(in oklab, var(--text) 12%, transparent); border-radius:var(--radius); padding:24px; box-shadow:var(--shadow)}
+.hero h1{margin:0 0 6px;font-size:clamp(28px,4vw,40px);line-height:1.12}
+.hero p{margin:0;color:var(--muted)}
+
+
+.panel{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+.input{
+flex:1 1 260px; display:flex; align-items:center; gap:10px;
+background:var(--card); border:1px solid color-mix(in oklab, var(--text) 10%, transparent); border-radius:12px; padding:10px 12px; box-shadow:var(--shadow)
+}
 </html>
